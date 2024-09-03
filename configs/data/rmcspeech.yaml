@@ -1,0 +1,32 @@
+defaults:
+  - ljspeech
+  - _self_
+
+_target_: optispeech.dataset.TextWavDataModule
+name: rmcspeech
+train_filelist_path: rmcspeech.txt
+valid_filelist_path: rmcspeech_val.txt
+batch_size: 64
+num_workers: 8
+text_processor:
+  languages:
+    - code: es-419
+      tokenizer: default
+      normalize_text: false
+feature_extractor:
+  preemphasis_filter_coef: # todo
+  lowpass_freq: # todo
+  highpass_freq: # todo
+  gain_db: # todo
+  trim_silence: true
+data_statistics:  
+  pitch_min: 
+  pitch_max: 
+  pitch_mean: 
+  pitch_std: 
+  energy_min: 
+  energy_max: 
+  energy_mean: 
+  energy_std: 
+  mel_mean: 
+  mel_std: 
