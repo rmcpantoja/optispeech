@@ -12,7 +12,7 @@ text_processor:
   languages:
     - code: es-419
       tokenizer: default
-      normalize_text: false
+      normalize_text: true
 feature_extractor:
   preemphasis_filter_coef: # todo
   lowpass_freq: # todo
